@@ -79,7 +79,7 @@ print(word[-6:])
 print(word[4:55]) #on  (this does not throw error of index out of bound)
 print(word[99:])  # ''  (this gives empty string)
 
-# ----------------------------------------------
+# -------------------------------------------------
 
 #NOTE: Python strings are immutable 
 #So assigning to an indexed position in the strings results in an error
