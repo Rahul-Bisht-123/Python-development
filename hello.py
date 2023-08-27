@@ -18,4 +18,3 @@ def fib(n):
         fibo.append(a)
         a,b = b,a+b
     return fibo
-
