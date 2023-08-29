@@ -101,3 +101,73 @@ print(f'hi my {name=} and my {age=}')
 # hi my name='snowbell' and my age=35
 
 # --------------------------------------------
+# str.format()
+print('i am {} and age is {}'.format('fish',34))
+# i am fish and age is 34
+
+print('i am {name} and age is {age}'.format(name='ram',age=44))
+# i am ram and age is 44
+
+print('i am {0} and my age is {1}'.format('hat',44))
+# i am hat and my age is 44
+
+print('i am {0} and my age is {age}'.format('groot',age=999))
+# i am groot and my age is 999
+
+# -----------------------------------
+users = {'ram':45,'shyam':46}
+print('ram : {ram:d} , shyam : {shyam:d}'.format(**users))
+# ram : 45 , shyam : 46
+
+print('ram : {0[ram]:d} , shyam : {0[shyam]:d}'.format(users))
+# ram : 45 , shyam : 46
+
+# ------------------------------------------
+# printing numbers 1to10 , with their squares , with their cubes
+
+for i in range(1,11):
+    print('{0:2d} || {1:3d} || {2:4d}'.format(i,i**2,i**3))
+    
+# 1 ||   1 ||    1
+#  2 ||   4 ||    8
+#  3 ||   9 ||   27
+#  4 ||  16 ||   64
+#  5 ||  25 ||  125
+#  6 ||  36 ||  216
+#  7 ||  49 ||  343
+#  8 ||  64 ||  512
+#  9 ||  81 ||  729
+# 10 || 100 || 1000
+
+# -------------------------------------------
+# There is another method, str.zfill(), which pads a 
+# numeric string on the left with zeros. 
+# It understands about plus and minus signs:
+
+print('12'.zfill(4))  #0012
+print('pp'.zfill(4))  #00pp
+
+print('-12'.zfill(4))  #-012
+
+
+# -----------------------------------------
+'Reading and Writing files'
+# ------------------------------------------
+
+'''
+r = read
+w = write
+a = append
+r+ = read and writing
+'''
+# file = open('hello.py','r+')
+
+# ------------------------------------------
+# If you have an object x, 
+# you can view its JSON string representation 
+# with a simple line of code:
+
+import json
+x = 'this is important data'
+print(json.dumps(x))
+# "this is important data"
